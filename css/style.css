@@ -583,13 +583,15 @@ h2 {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
 }
 .modal-form-input-svg {
   width: 18px;
   height: 18px;
   position: absolute;
   top: 0;
-  left: -25px;
+  left: -27px;
   fill: var(--primary-text-color);
 }
 .modal-form-input:focus {
@@ -607,6 +609,7 @@ h2 {
   + .modal-form-input-label
   .modal-form-input-svg {
   fill: var(--accent-color);
+  transform: translate(27px, 33px);
 }
 .modal-form-textarea {
   height: 120px;
@@ -688,6 +691,7 @@ h2 {
   align-items: center;
   cursor: pointer;
   background-color: transparent;
+  outline: none;
 }
 .modal-form-closer:hover .modal-form-closer-svg,
 .modal-form-closer:focus .modal-form-closer-svg {
