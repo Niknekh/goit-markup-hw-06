@@ -577,14 +577,17 @@ h2 {
   position: absolute;
   left: 42px;
   top: 12px;
+
+  display: flex;
+  align-items: center;
+}
+.modal-form-input-label .modal-form-input-label-span {
   color: var(--secondary-text-color);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
-  display: flex;
-  align-items: center;
 }
 .modal-form-input-svg {
   width: 18px;
@@ -597,8 +600,10 @@ h2 {
 .modal-form-input:focus {
   outline-color: var(--accent-color);
 }
-.modal-form-input:focus + .modal-form-input-label,
-.modal-form-input:not(:placeholder-shown) + .modal-form-input-label {
+.modal-form-input:focus + .modal-form-input-label .modal-form-input-label-span,
+.modal-form-input:not(:placeholder-shown)
+  + .modal-form-input-label
+  .modal-form-input-label-span {
   color: var(--accent-color);
   transform: translate(-27px, -33px);
   font-size: 12px;
@@ -609,7 +614,6 @@ h2 {
   + .modal-form-input-label
   .modal-form-input-svg {
   fill: var(--accent-color);
-  transform: translate(27px, 33px);
 }
 .modal-form-textarea {
   height: 120px;
